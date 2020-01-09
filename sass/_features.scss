@@ -1,0 +1,47 @@
+.features {
+
+  margin: 15rem 0px;
+
+  // part of a grid item
+  grid-column: center-start / center-end;
+
+  // grid container
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: auto auto;
+  grid-gap: 6rem;
+  align-items: start;
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 10rem 0px;
+  }
+
+}
+
+.feature {
+
+  // 3rd level grid
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+    /* span column to the end */
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem);
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+
+
+
+
+
+}
